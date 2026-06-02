@@ -1,0 +1,24 @@
+{
+  "id": "CLM-004",
+  "order": {
+    "id": "ORD-D210",
+    "merchant": "Riverbend Coffee",
+    "totalUsd": 42.0,
+    "items": ["Riverbend Single-Origin Subscription - 12oz Ethiopia"],
+    "placedAt": "2026-05-31T07:45:00Z",
+    "carrier": "USPS",
+    "trackingNumber": "9400111899223400099876"
+  },
+  "customer": {
+    "id": "CUS-7124",
+    "email": "rob.h@example.com",
+    "priorClaims90d": 0,
+    "accountAgeDays": 88
+  },
+  "tracking": [
+    { "timestamp": "2026-05-31T20:14:00Z", "status": "Label created" },
+    { "timestamp": "2026-06-01T03:09:00Z", "status": "Accepted at facility", "location": "Asheville, NC" }
+  ],
+  "customerMessage": "It's been a day and a half and my coffee isn't here yet. I paid for shipping, this is unacceptable. Refund please.",
+  "attachments": []
+}

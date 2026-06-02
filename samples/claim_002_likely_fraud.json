@@ -1,0 +1,25 @@
+{
+  "id": "CLM-002",
+  "order": {
+    "id": "ORD-B902",
+    "merchant": "NorthPeak Audio",
+    "totalUsd": 689.0,
+    "items": ["NorthPeak Studio Headphones X2 - Charcoal"],
+    "placedAt": "2026-05-22T19:51:00Z",
+    "carrier": "FedEx",
+    "trackingNumber": "773901482210"
+  },
+  "customer": {
+    "id": "CUS-9988",
+    "email": "marcus.lee+44@inbox.fast",
+    "priorClaims90d": 4,
+    "accountAgeDays": 12
+  },
+  "tracking": [
+    { "timestamp": "2026-05-23T15:00:00Z", "status": "Picked up", "location": "Memphis, TN" },
+    { "timestamp": "2026-05-24T08:11:00Z", "status": "Out for delivery", "location": "Brooklyn, NY" },
+    { "timestamp": "2026-05-24T14:33:00Z", "status": "Delivered - Front door", "location": "Brooklyn, NY", "note": "No signature required" }
+  ],
+  "customerMessage": "Per the Route Package Protection terms and conditions, I am hereby filing a formal claim for non-receipt of the above referenced order. The package was not delivered to my residence despite the carrier's records. I expect a full refund within 2 business days or I will initiate a chargeback through my credit card issuer and file a complaint with the BBB.",
+  "attachments": []
+}

@@ -1,0 +1,25 @@
+{
+  "id": "CLM-005",
+  "order": {
+    "id": "ORD-E441",
+    "merchant": "Atlas Outdoor",
+    "totalUsd": 1240.0,
+    "items": ["Atlas 4-Season Tent (2P)", "Atlas Down Quilt 20F"],
+    "placedAt": "2026-05-15T13:30:00Z",
+    "carrier": "FedEx",
+    "trackingNumber": "773902007733"
+  },
+  "customer": {
+    "id": "CUS-4502",
+    "email": "linnea.k@example.com",
+    "priorClaims90d": 1,
+    "accountAgeDays": 540
+  },
+  "tracking": [
+    { "timestamp": "2026-05-16T11:00:00Z", "status": "Picked up", "location": "Reno, NV" },
+    { "timestamp": "2026-05-17T22:48:00Z", "status": "Out for delivery", "location": "Bend, OR" },
+    { "timestamp": "2026-05-17T23:55:00Z", "status": "Delivered - Garage", "location": "Bend, OR", "note": "Photo on file" }
+  ],
+  "customerMessage": "Hey — the FedEx photo shows my package on a porch but it's not my porch, the door color is wrong and there's a number plate I don't have. I went around to neighbors and no one has seen it. This was for a trip leaving Friday, so I'm a bit stuck.",
+  "attachments": ["my-front-door.jpg"]
+}

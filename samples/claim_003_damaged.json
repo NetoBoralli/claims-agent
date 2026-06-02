@@ -1,0 +1,25 @@
+{
+  "id": "CLM-003",
+  "order": {
+    "id": "ORD-C5E7",
+    "merchant": "Hearthside Ceramics",
+    "totalUsd": 78.0,
+    "items": ["Hearthside Dinner Plate Set (4) - Sandstone"],
+    "placedAt": "2026-05-26T11:09:00Z",
+    "carrier": "UPS",
+    "trackingNumber": "1Z999AA10123456784"
+  },
+  "customer": {
+    "id": "CUS-3041",
+    "email": "priya.s@example.com",
+    "priorClaims90d": 0,
+    "accountAgeDays": 218
+  },
+  "tracking": [
+    { "timestamp": "2026-05-26T19:00:00Z", "status": "Label created", "location": "Portland, OR" },
+    { "timestamp": "2026-05-27T22:14:00Z", "status": "Departed facility", "location": "Sacramento, CA" },
+    { "timestamp": "2026-05-29T16:01:00Z", "status": "Delivered", "location": "San Diego, CA" }
+  ],
+  "customerMessage": "Two of the four plates were broken when I opened the box — looks like the box took a hit on one corner. I've attached photos of the box and the broken plates. The other two pieces are fine. Could you replace or refund the broken ones? Not in a rush.",
+  "attachments": ["box-damage-corner.jpg", "broken-plate-1.jpg", "broken-plate-2.jpg"]
+}

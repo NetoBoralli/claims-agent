@@ -1,0 +1,22 @@
+{
+  "name": "claims-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-agent adjudicator for post-purchase shipping/protection claims. Swappable LLM backend (Ollama locally, any OpenAI-compatible API in prod).",
+  "type": "module",
+  "scripts": {
+    "claim": "tsx src/index.ts",
+    "claim:all": "tsx src/index.ts --all",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.67.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}

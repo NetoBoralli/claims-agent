@@ -1,0 +1,25 @@
+{
+  "id": "CLM-001",
+  "order": {
+    "id": "ORD-A4F1",
+    "merchant": "Lumen Apparel",
+    "totalUsd": 134.5,
+    "items": ["Lumen Mid-Weight Hoodie - Olive - M", "Lumen Beanie - Black"],
+    "placedAt": "2026-05-10T14:22:00Z",
+    "carrier": "USPS",
+    "trackingNumber": "9400111899223456789012"
+  },
+  "customer": {
+    "id": "CUS-1827",
+    "email": "jamie.r@example.com",
+    "priorClaims90d": 0,
+    "accountAgeDays": 412
+  },
+  "tracking": [
+    { "timestamp": "2026-05-11T03:14:00Z", "status": "Accepted at facility", "location": "Salt Lake City, UT" },
+    { "timestamp": "2026-05-12T17:02:00Z", "status": "In transit", "location": "Denver, CO" },
+    { "timestamp": "2026-05-13T22:48:00Z", "status": "Arrived at facility", "location": "Kansas City, MO" }
+  ],
+  "customerMessage": "Hi — I ordered a hoodie almost three weeks ago and it never showed up. The tracking just stopped in Kansas City. Can you help? It was supposed to be a birthday gift and the date already passed.",
+  "attachments": []
+}
