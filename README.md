@@ -17,10 +17,6 @@ tiny module with a focused system prompt and a `zod`-validated JSON output,
 glued together by a sequential pipeline that produces a single inspectable
 `Trace`.
 
-The trace is what makes it interview-grade — every step is named, timed, and
-recoverable, and the same trace is what the companion
-[`agent-evals`](https://github.com/NetoBoralli/agent-evals) repo will assert on.
-
 ```
 src/
   llm/
@@ -128,35 +124,3 @@ claim CLM-001  ·  provider ollama
 
 latency: total 7421ms  (classifier=1432ms, policy=2ms, ...)
 ```
-
-## Design choices worth surfacing in an interview
-
-- **Per-agent JSON schemas + retry-on-parse-fail.** Failure feeds back into the
-  conversation as a correction prompt; the agent is forced to fix its own
-  output. Avoids the LangChain layer entirely.
-- **Hybrid retrieval.** Lexical BM25 for the policy corpus (3 files, latency
-  matters more than recall); the LLM never sees the whole corpus, only top-k
-  cited by filename. Swap in pgvector + a reranker by replacing one file.
-- **Hybrid fraud check.** Deterministic rules surface the structural red flags
-  (repeat claimant, new-account-high-value), then the LLM only does what it
-  uniquely can — read the narrative for tonal/contextual inconsistency.
-- **Bright-line decision rules.** The decider's prompt spells out the four
-  hard rules (not-yet-due → deny, riskScore ≥ 0.7 → escalate, low confidence
-  → escalate, refund within policy cap). Off-rails decisions are an
-  observable failure mode the evals harness can catch.
-- **Provider-agnostic core.** Same code runs against Ollama in dev,
-  vLLM/TGI/OpenAI/OpenRouter in prod. The Bedrock case (different request
-  shape) is just another `LLMProvider` impl, not a refactor.
-- **Observable side effects.** Every tool call appends to a JSONL file in
-  `.runs/`. The demo never touches a third party but the diff against an
-  empty `.runs/` is the proof the agent did something.
-
-## Not in scope (intentionally)
-
-- Streaming responses, parallel agent execution — pipeline is strictly
-  sequential because each stage depends on the prior one.
-- Vector embeddings — three policy files don't need them, and lexical
-  retrieval is the more honest baseline.
-- Auth, persistence, retries on network — this is a portfolio piece, not a
-  production service. The companion repo `agent-evals` is what makes it
-  evaluable.
